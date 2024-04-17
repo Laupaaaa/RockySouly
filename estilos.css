@@ -1,9 +1,15 @@
 * {
 	font-family: rockySouly;
+	font-weight: 20;
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
 	text-decoration: none;
+	color: white;
+}
+
+html{
+	scroll-behavior: smooth;
 }
 
 /* MENU */
@@ -12,9 +18,8 @@ header {
 	position: fixed;
 	top: 0px;
 	left: 0px;
-	background: white;
+	background: #2E4551;
 }
-
 .headerSuperior{
 	max-width: 1200px;
 	margin: auto;
@@ -23,61 +28,52 @@ header {
 	padding: 0px;
 
 }
-
 .logo img{
 	width: 80px;
 }
-
 .fondoMenu{
 	width: 100%;
 	height: 50px;
 	padding: 0px 20px;
-	background: lightgreen;
+	background: #FFBF4D;
 }
-
 .menu{
 	max-width: 1200px;
 	margin: auto;
 	height: 100%;
 }
-
 nav {
 	height: 100%;
 }
-
 nav > ul{
 	height: 100%;
 	display: flex;
 }
-
 nav ul li {
 	height: 100%;
 	list-style: none;
 	position: relative;
 }
-
 nav > ul > li > a{
 	width: 100%;
 	height: 100%;
 	display: flex;
 	align-items: center;
 	padding: 20px;
-	color: darkblue;
+	color: black;
 	font-size: 20px;
 	transition: all 300ms ease;
 }
-
 nav > ul > li > a:hover{
 	transform: scale(1.1);
-	background: green;
+	background: #E27203;
 	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1.0);
 }
-
 nav ul li ul {
 	width: 200px;
 	display: flex;
 	flex-direction: column;
-	background: lightcyan;
+	background:#B28F69 ;
 	position: absolute;
 	top: 100px;
 	padding: 20px 0px;
@@ -87,37 +83,34 @@ nav ul li ul {
 	transition: all 300ms ease;
 
 }
-
 nav ul li:hover  ul{
 	visibility: visible;
 	opacity: 1;
 	top: 60px;
 }
-
 nav ul li ul:before {
 	content: '';
 	width: 0;
 	height: 0;
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
-	border-bottom: 15px solid lightcyan;
+	border-bottom: 15px solid  #B28F69;
 	position: absolute;
 	top: -15px;
 	left: 20px;
 	z-index: 10;
 }
-
 nav ul li ul li a {
 	display: block;
-	color: cyan;
+	color: black;
 	padding: 10px;
 	padding-left: 10px;
 	margin-top: 10px;
 	font-size: 15px;
 }
-
 nav ul li ul li a:hover {
-	background: darkcyan;
+	background: black;
+	color: #E27203;	
 	transform: scale(1.1);
 	padding-left: 25px;
 	font-size: 15px;
@@ -126,73 +119,66 @@ nav ul li ul li a:hover {
 }
 
 
+/* MAIN */
 
+main {
+	background: #2E4551;
+	padding: 40px 20px;
+	margin-top: 100px;
+}
+article {
+	max-width: 1200px;
+	margin: 20px auto;
+	padding: 40px;
+	background: #FFBF4D;
+		scroll-margin-top: 150px ;
 
-
-
-
-
-
-#divTitulo {
-	color: lightcyan;
-	font-size: 30px;
+}
+article div {
+	display: inline-block;
+}
+#divLogo img{
+	width: 200px;
+	margin: 20px;
+}
+#disclaimer{
+	background: red;
+}
+#disclaimer p {
+	*color: red; 
+	font-family: monospace;
+	font-size: 20px;
 }
 
-#divLogo {
-	
+
+
+
+/* cuando la página está en un dispositivo de menos de 500px*/
+@media screen and (max-width:500px){
+	.logo img{
+		width: 50px;
+	}
+	nav > ul {
+		flex-direction: column;
+		background-color: #FFBF4D;
+		position: fixed;
+		left: 0;
+		top: 80px;
+		width: 100%;
+		height: 250px;
+		transition: all 300ms ease;
+		z-index: 100;
+		opacity: 1;
+		*visibility: hidden;
+	}
+	/*para que no crezcan los botones al pulsar y se salgan de la pantalla*/
+	nav > ul > li > a:hover {
+		transform: scale(1);
+	}
+	nav ul li ul {
+		left: 90px;
+	}
+	nav > ul > li:hover ul {
+		top: 80px;
+	}
 }
-
-
-
-
-
-
-
-
-/*
-
-
-#divMenu {
-	margin: auto;
-	width: 500px;
-}
-
-ul {
-	list-style: none;
-}
-
-.menu li a{
-	background-color: gray ;
-	color: darkblue;
-	text-decoration: none;
-	padding: 10px 20px;
-	display: block;
-}
-
-.menu li a:hover{
-	background-color: lightcoral;
-}
-
-.menu > li {
-	float: top;
-}
-
-.menu li ul {
-	display: none;
-	position: absolute;
-	min-width: 150px;
-}
-
-.menu li:hover > ul{
-	display: block;
-}
-
-.menu li ul li {
-	position: relative;
-}
-
-.menu li ul li ul{
-	right: -150px;
-	top: 0px;
-}
-*/
