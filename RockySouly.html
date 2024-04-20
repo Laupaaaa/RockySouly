@@ -3,6 +3,7 @@
 	<head>
 		<title> Rocky Souly</title>
 		<link rel="stylesheet" type="text/css" href="estilos.css" />
+		<script defer src="javaS.js"></script>
 
 	</head>
 	<body>
@@ -10,9 +11,13 @@
 			<div class="headerSuperior">
 				<div class="logo">
 					<img src="Imagenes/Animacion_Andar_Minero.gif"/>
+					<h1>ROCKY SOULY</h1>
 				</div>
 			</div>
 			<div class="fondoMenu">
+				<button class="abrirMenu" aria-label="Abrir o Cerrar menú">
+					<img src="Imagenes/barras.png" alt="abrir o cerrar menú">
+				</button>
 				<div class="menu">
 					<nav>
 						<ul>
@@ -25,21 +30,20 @@
 							</li>
 							<li><a href=""> LA CAMPAÑA </a>
 								<ul>
-									<li><a href=""> VÍDEO PROMOCIONAL </a></li>
-									<li><a href=""> CANCIÓN ORIGINAL </a></li>
-									<li><a href=""> FUENTE ORIGINAL </a></li>
-									<li><a href=""> DESCRIPCIÓN</a>
+									<li><a href="#videoYCancion"> VÍDEO PROMOCIONAL </a></li>
+									<li><a href="#videoYCancion"> CANCIÓN ORIGINAL </a></li>
+									<li><a href="#fuenteOriginal"> FUENTE ORIGINAL </a></li>
+									<li><a href="#descripcion"> DESCRIPCIÓN</a>
 									</li>
-									<li><a href=""> CONTRIBUCIONES </a></li>
-									<li><a href=""> OBJETIVOS </a></li>
-									<li><a href=""> EQUIPO </a></li>
+									<li><a href="#contribucion"> CONTRIBUCIONES </a></li>
+									<li><a href="#objetivos"> OBJETIVOS </a></li>
+									<li><a href="#autores"> EQUIPO </a></li>
 									</li>
 								</ul>
 							</li>
 							<li><a href="">PREGUNTAS FRECUENTES </a></li>
 							<li><a href=""> COMENTARIOS </a></li>
 						</ul>
-						
 					</nav>
 				</div>
 			</div>
@@ -47,12 +51,10 @@
 		<main>
 
 			<article id="articlePrincipal">
-				<div id="divTitulo"> 
-					<h1>ROCKY SOULY</h1>
-					<p> Lema del grupo... </p>
-				</div>
-				<div id="divLogo">
+				<div id="divTituloLemaLogo"> 
+					<h1>ROCKY SOULY:  </h1>					
 					<img src="Imagenes/Logo.jpg"/>
+					<p> Lema del grupo... </p>
 				</div>
 				<div>
 					<h2 class="descripcion"> - EL JUEGO: </h2>
@@ -61,38 +63,91 @@
 						</p>
 				</div>
 			</article>
+			
+			
+			<article id="descripcion">
+				<div id="elJuego">
+					<h2> - EL JUEGO: </h2>
+						<p>
+							ROCKY SOULY es un metroidvania semi mundo abierto que combina un combate satisfactorio con la exploración y el coleccionismo de reliquias y artefactos por el mapa. Además, contiene npcs los cuales tienen tramas narrativas individuales y conjuntas. El objetivo final es huir de la mina. Para ello, deberás matar una serie de jefes en el orden que el jugador prefiera. Cuando se vayan derrotando dichos jefes, el nivel del juego aumentará y la partida se volverá más difícil.
+						</p>
+				</div>
+				<div id="elCombate">
+					<h2>- EL COMBATE: </h2>
+					<p>
+						Se basará en un combate activo en el cual deberás esquivar habilidades y aprender las mecánicas de cada jefe y enemigo, aunque con un gran nivel de habilidad o de exploración, dichos jefes se podrán pasar sin aprenderte las mecánicas de memoria, ya que serán combates muy visuales. Además, podrás ir mejorando tu personaje a medida que exploras y avanzas por el juego, desbloqueando nuevas armas y herramientas, así como accesorios con pasivas y mejoras de nivel, que permitirán hacer nuevos combos entre otras cosas.
+					</p>
+				</div>
+				<div id="historia">
+					<h2>- HISTORIA:</h2>
+						<p>
+							El personaje principal, se quedará encerrado en una mina debido a un derrumbamiento. Para salir de aquí, deberá conseguir un artefacto uniendo las piezas que suelta cada jefe. Una vez se tengan todas, el personaje podrá salir de dicha mina. Por otra parte, aparecerán durante nuestra aventura una serie de criaturas fantásticas, incluso civilizaciones, que viven en las profundidades. Todas ellas tienen su propia historia y te ayudarán con la empresa ofreciéndote mejoras, armas y conocimientos(como mecánicas y debilidades de ciertos enemigos o jefes) a cambio de recursos que se podrán obtener por la mina.
+						</p>
+				</div>
+			</article>
+	
+			<article id="videoYCancion">
+				<h2>- VÍDEO ORIGINAL:</h2>
+				<h2>- CANCIÓN ORIGINAL: </h2>
+			</article>
+
+			<article id="fuenteOriginal">
+				<h2 >- NUESTRA FUENTE:</h2>
+				<div id="fuente">
+					<p>Hemos creado nuestra propia fuente de texto para nuestro videojuego ROCKY SOULY, diseñada y creada desde cero, con la idea de simular una tipografía escrita a mano por el minero que se encuentra atrapado en la cueva, escribiendo sobre la roca con aquello que encuentra. Por ello se puede observar como los trazados no son una línea compacta.</p>
+					<img src="Imagenes/Tipografía.png">
+				</div>
+			</article>
+
+			<article id="objetivos">
+				<h2> OBJETIVOS </h2>
+			</article>
 
 			<article id="autores">
 				<h2>AUTORÍA</h2>
 				<p>Nombres </p>
 			</article>
-			
+
+
+
+
+
+
 			<article id="disclaimer">
 				<div >
-					<p> ☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠ ATENCIÓN: Esta página simula la campaña de microfinanciación de un videojuego ficticio y no representa un producto real. Práctica de Multimedia, 1º GDDV - Curso 23/24 (Móstoles), URJC. La URJC no se hace responsable del contenido expuesto por el autor. ☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠
+					<p> ☠ ATENCIÓN: Esta página simula la campaña de microfinanciación de un videojuego ficticio y no representa un producto real. Práctica de Multimedia, 1º GDDV - Curso 23/24 (Móstoles), URJC. La URJC no se hace responsable del contenido expuesto por el autor. ☠
 					</p>
 				</div>
 			</article>
-
-		
-
-		<div id="divTexto">
-			<h3> - EL JUEGO: </h3>
-			<p>
-			ROCKY SOULY es un metroidvania semi mundo abierto que combina un combate satisfactorio con la exploración y el coleccionismo de reliquias y artefactos por el mapa. Además, contiene npcs los cuales tienen tramas narrativas individuales y conjuntas. El objetivo final es huir de la mina. Para ello, deberás matar una serie de jefes en el orden que el jugador prefiera. Cuando se vayan derrotando dichos jefes, el nivel del juego aumentará y la partida se volverá más difícil.
-			</p>
-			
-			<h3>- EL COMBATE: </h3>
-			<p>
-			Se basará en un combate activo en el cual deberás esquivar habilidades y aprender las mecánicas de cada jefe y enemigo, aunque con un gran nivel de habilidad o de exploración, dichos jefes se podrán pasar sin aprenderte las mecánicas de memoria, ya que serán combates muy visuales. Además, podrás ir mejorando tu personaje a medida que exploras y avanzas por el juego, desbloqueando nuevas armas y herramientas, así como accesorios con pasivas y mejoras de nivel, que permitirán hacer nuevos combos entre otras cosas.
-			</p>
-			
-			<h3>- HISTORIA:</h3>
-			<p>
-			El personaje principal, se quedará encerrado en una mina debido a un derrumbamiento. Para salir de aquí, deberá conseguir un artefacto uniendo las piezas que suelta cada jefe. Una vez se tengan todas, el personaje podrá salir de dicha mina. Por otra parte, aparecerán durante nuestra aventura una serie de criaturas fantásticas, incluso civilizaciones, que viven en las profundidades. Todas ellas tienen su propia historia y te ayudarán con la empresa ofreciéndote mejoras, armas y conocimientos(como mecánicas y debilidades de ciertos enemigos o jefes) a cambio de recursos que se podrán obtener por la mina.
-			</p>
-		</div>
-
 		</main>
+
+		<aside id="contribucion">
+			<h2> CONTRIBUCIONES</h2>
+				<article class="contribucion">
+					<h3>Contribución 1</h3>
+					<ul>
+						<li>Gananzia 1</li>
+						<li>Gananzia 2</li>
+						<li>Gananzia 3</li>
+					</ul>
+				</article>
+				<article class="contribucion">
+					<h3>Contribución 2</h3>
+					<ul>
+						<li>Ganancia 1</li>
+						<li>Ganancia 2</li>
+						<li>Ganancia 3</li>
+					</ul>
+				</article>
+				<article class="contribucion">
+					<h3>Contribución 3</h3>
+					<ul>
+						<li>Ganancia 1</li>
+						<li>Ganancia 2</li>
+						<li>Ganancia 3</li>
+					</ul>
+				</article>
+
+		</aside>
 	</body>
 </html>
