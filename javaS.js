@@ -1,8 +1,8 @@
-const menu = document.querySelector(".menu");
-const abrirMenu = document.querySelector(".abrirMenu");
+const menu = document.querySelector('.menu');
+const abrirMenu = document.querySelector('.abrirMenu');
 
 function toggleMenu() {
-	menu.classList.toggle("menuCerrado");
+	menu.classList.toggle('menuCerrado');
 }
 
-abrirMenu.addEventListener("click", toggleMenu);
+abrirMenu.addEventListener('click', toggleMenu);
