@@ -16,15 +16,23 @@ html{
 	--marronOscuro:#7C6241;
 	--amarillo2:#BB9305;
 	--azul: #2E4551;
-
 }
 h2{
 	margin: 20px 10px;
 	color: white;
 }
+h6 {
+	color: white;
+	font-size: 100px;
+	display: flex;
+	justify-content: center;
+}
 body {
 	background: var(--azul);
 
+}
+article{
+	border-radius: 20px;
 }
 
 /* MENU */
@@ -75,6 +83,7 @@ nav ul li {
 	list-style: none;
 	position: relative;
 }
+
 nav > ul > li > a{
 	width: 100%;
 	height: 100%;
@@ -136,7 +145,11 @@ nav ul li ul li a:hover {
 	padding-left: 25px;
 	font-size: 15px;
 	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1.0);
-
+}
+#actual{
+	transform: scale(1.15);
+	background: linear-gradient(to bottom, var(--amarillo), var(--naranja));
+	border-radius: 10px;
 }
 
 
@@ -197,8 +210,66 @@ article div {
 	color: white;
 }
 
+/*EL EQUIPO*/
+#autores, #autoria{
+	background: none;
+}
+#autores article{
+	display: flex;
+	flex-direction: row;
+	background: none;
+	padding: 0px;
+}
+#autores p, #autores h4{
+	color: white;
+	padding: 10px;
+}
+#autores article div{
+	width: 100%;
+	background-color: var(--amarillo2);
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;
+}
+#autores article div div{
+	background: none;
+}
+#autores img{
+	width: 20px;
+}
+#paula {
+	background-image: url(Imagenes/MineroPaula.png);
+}
+#jaime {
+	background-image: url(Imagenes/MineroJaime.png);
+}
+#raul {
+	background-image: url(Imagenes/MineroRaúl.png);
+}
+#alvaro {
+	background-image: url(Imagenes/MineroAlvaro.png);
+}
+#david {
+	background-image: url(Imagenes/Minero.png);
+}
+#sandra {
+	background-image: url(Imagenes/MineroSandra.png);
+}
+.nombre {
+	display: flex;
+	flex-direction: row;
+}
+#autoria article{
+	background: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
+}
 
+#autoria img{
+	width: 80px;
+}
 
 
 
@@ -227,14 +298,20 @@ aside h3{
 
 
 /*PAGINA CONTRIBUCIONES*/
+#contribuciones article{
+	background: none;
+}
 #contribuciones article article{
 	display: flex;
 	padding: 0px;
+
 }
 #contribuciones article div{
 	background: linear-gradient(to bottom, var(--amarillo), var(--naranja));
 	padding: 20px;
 	margin: 20px;
+	border-radius: 20px;
+
 }
 #contribuciones h1{
 	color: white;
@@ -248,6 +325,46 @@ aside h3{
 #contribuciones li{
 	padding: 5px;
 }
+#contribuciones #disclaimer{
+	position: fixed;
+	top: 85%;
+	left: 0px;
+	padding: 10px;
+}
+
+/*PREGUNTAS FRECUENTES*/
+.faq{
+	background: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.pregunta {
+	margin: 10px;
+	padding: 35px;
+	border: 1px solid black;
+}
+.preguntando h3{
+	margin: 0px;
+	cursor: pointer;
+}
+.respuesta{
+	height: 0px;
+	opacity: 0;
+}
+.respuesta.verRespuestas {
+	height: auto;
+	opacity: 1;
+}
+
+
+/*COMENTARIOS*/
+#comentarios{
+	margin: 120px 0px 0px 0px;
+}
+
+
 
 
 
@@ -258,24 +375,104 @@ aside h3{
 .botonDonar{
 	color: white;
 	font-family: "Trebuchet MS", sans-serif;
-	display: inline-block;
+	display: flex;
 	border: 5px double var(--naranja);
-	border-radius: 20px ;
 	padding: 10px 20px;
+	justify-content: space-evenly;
 }
 .botonDonar:hover{
 	transform: scale(1.1);
 }
+#contribuciones div{
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
 #contribuciones div div {
 	background: var(--azul);
+	width: 50%;
 }
 
 
 
 
 
-/* cuando la página está en un dispositivo de menos de 500px*/
+
+/* cuando la página está en un dispositivo de menos de 800px*/
+
+
+
+@media screen and (max-width:800px){
+	h6{
+		font-size: 50px;
+	}
+	/*MAIN*/
+	main {
+		width: 100%;
+	}
+
+	#descripcion, #fuente {
+		display: flex;
+		flex-direction: column;
+	}
+	#descripcion div {
+		margin: 20px 10px;
+	}
+	#objetivos{
+		background-image: none;
+	}
+	#objetivos p, #objetivos h3{
+		color: black;
+	}
+	#contribuciones #disclaimer{
+		position: initial;
+	}
+	#autores{
+		padding: 20px 0px 0px 0px;
+	}
+	#autores article {
+		padding: 0px;
+		flex-direction: column;
+	}
+	#autoria img{
+		width: 50px;
+	}
+
+	/* CONTRIBUCIONES */
+	aside {
+		width: 100%;
+		position: relative;
+		top: 0px;
+		left: 0px;
+		padding: 40px 20px;
+		z-index: -10;
+		background: var(--amarillo);
+	}
+	#contribuciones h1{
+		font-size: 30px;
+	}
+	#contribuciones article article{
+		align-items: center;
+						flex-direction: column;
+		margin: 0px;
+
+	}
+	#contribuciones article article div{
+		margin: 30px;
+	}
+	#contribuciones div {
+		width: 100%;
+	}
+}
+
+
+
 @media screen and (max-width:500px){
+	h6 {
+		font-size: 38px;
+	}
 	/*MENU*/
 	.logo img{
 		width: 50px;
@@ -305,6 +502,10 @@ aside h3{
 	nav > ul > li:hover ul {
 		top: 60px;
 	}
+	#actual{
+		transform: scale(1);
+		background: var(--naranja);
+	}
 	/*MAIN*/
 	#divTituloLemaLogo img, #fuente img{
 		width: 80%;
@@ -315,6 +516,9 @@ aside h3{
 	}
 	#descripcion p, #descripcion h3{
 		color: black;
+	}
+	#autoria img{
+		width: 20px;
 	}
 	/*BOTONES*/
 	.abrirMenu{
@@ -333,42 +537,3 @@ aside h3{
 		pointer-events: none;
 	}
 }
-
-
-@media screen and (max-width:800px){
-	/*MAIN*/
-	main {
-		width: 100%;
-	}
-
-	#descripcion, #fuente {
-		display: flex;
-		flex-direction: column;
-	}
-	#descripcion div {
-		margin: 20px 10px;
-	}
-		#objetivos{
-		background-image: none;
-	}
-	#objetivos p, #objetivos h3{
-		color: black;
-	}
-	/* CONTRIBUCIONES */
-	aside {
-		width: 100%;
-		position: relative;
-		top: 0px;
-		left: 0px;
-		padding: 40px 20px;
-		z-index: -10;
-		background: var(--amarillo);
-	}
-	#contribuciones h1{
-		font-size: 30px;
-	}
-	#contribuciones article article{
-		flex-direction: column;
-	}
-}
-
