@@ -364,7 +364,11 @@ aside h3{
 	margin: 120px 0px 0px 0px;
 }
 
-
+.utterances-frame {
+	position: initial;
+	height: 300px;
+	z-index: -1;
+}
 
 
 
