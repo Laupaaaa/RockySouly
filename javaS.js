@@ -2,6 +2,7 @@ const menu = document.querySelector('.menu');
 const abrirMenu = document.querySelector('.abrirMenu');
 const preguntas = document.querySelectorAll(".preguntando");
 
+
 function toggleMenu() {
 	menu.classList.toggle('menuCerrado');
 }
@@ -18,3 +19,5 @@ function cerraRespuesta() {
 		pregunta.nextElementSibling.classList.remove('verRespuestas')
 	});
 }
+
+

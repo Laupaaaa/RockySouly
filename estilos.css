@@ -1,5 +1,5 @@
 * {
-	font-family: rockySouly;
+	font-family: rockySouly, "Finger Paint";
 	font-weight: 20;
 	margin: 0px;
 	padding: 0px;
@@ -7,7 +7,11 @@
 	text-decoration: none;
 	color: black;
 } 
-
+/*.finger-paint-regular {
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}*/
 html{
 	scroll-behavior: smooth;
 	--amarillo:#FFBF4D;
@@ -42,6 +46,7 @@ header {
 	top: 0px;
 	left: 0px;
 	background: var(--azul);
+	z-index: 100;
 
 }
 .headerSuperior{
@@ -209,6 +214,36 @@ article div {
 #descripcion p,#objetivos p, #descripcion h3, #objetivos h3{
 	color: white;
 }
+#mineros img {
+	width: 80px;
+	height: 99px;
+}
+#iconos img {
+	width: 80px;
+}
+#iconos{
+	background: linear-gradient(to bottom, var(--amarillo2), var(black));
+}
+
+
+
+
+/*LA CAMPAÑA*/
+#videoYCancion, #objetivos div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#objetivos {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+#objetivos article {
+	margin: 0px;
+	padding: 0px;
+	background: none;
+}
 
 /*EL EQUIPO*/
 #autores, #autoria{
@@ -262,13 +297,16 @@ article div {
 #autoria article{
 	background: none;
 	display: flex;
+	flex-direction: column;	
 	justify-content: space-between;
-	align-items: center;
 
 }
-
-#autoria img{
-	width: 80px;
+#autoria div {
+	margin: 50px 0px 0px 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: centre;
+	flex-direction: row;
 }
 
 
@@ -331,6 +369,10 @@ aside h3{
 	left: 0px;
 	padding: 10px;
 }
+.imgContribución {
+	width: 100%;
+}
+
 
 /*PREGUNTAS FRECUENTES*/
 .faq{
@@ -341,19 +383,21 @@ aside h3{
 	align-items: center;
 }
 .pregunta {
+	height: auto;
 	margin: 10px;
 	padding: 35px;
-	border: 1px solid black;
 }
 .preguntando h3{
 	margin: 0px;
 	cursor: pointer;
 }
-.respuesta{
+.respuesta {
 	height: 0px;
 	opacity: 0;
 }
+
 .respuesta.verRespuestas {
+	margin: 30px 0px 0px 0px;
 	height: auto;
 	opacity: 1;
 }
@@ -440,10 +484,13 @@ aside h3{
 		padding: 0px;
 		flex-direction: column;
 	}
-	#autoria img{
+	#mineros img {
+		width: 50px;
+		height: 62px;
+	}
+	#iconos img {
 		width: 50px;
 	}
-
 	/* CONTRIBUCIONES */
 	aside {
 		width: 100%;
@@ -521,8 +568,15 @@ aside h3{
 	#descripcion p, #descripcion h3{
 		color: black;
 	}
-	#autoria img{
-		width: 20px;
+	#mineros img {
+		width: 30px;
+		height: 37px;
+	}
+	#iconos img {
+		width: 30px;
+	}
+	#autoria div{
+		align-items: center;
 	}
 	/*BOTONES*/
 	.abrirMenu{
