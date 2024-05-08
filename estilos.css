@@ -7,19 +7,19 @@
 	text-decoration: none;
 	color: black;
 } 
-/*.finger-paint-regular {
-  font-family: "Finger Paint", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}*/
+@font-face{
+	font-family: "rockySouly.ttf";
+	src: url("rockySouly.ttf") format("opentype");
+}
 html{
 	scroll-behavior: smooth;
 	--amarillo:#FFBF4D;
 	--naranja:#E27203;
-	--marronClaro:#B28F69 ;
-	--marronOscuro:#7C6241;
+	+--marronClaro:#B28F69 ;
+	+--marronOscuro:#7C6241;
 	--amarillo2:#BB9305;
 	--azul: #2E4551;
+
 }
 h2{
 	margin: 20px 10px;
@@ -32,7 +32,7 @@ h6 {
 	justify-content: center;
 }
 body {
-	background: var(--azul);
+	background:var(--azul);
 
 }
 article{
@@ -244,11 +244,17 @@ article div {
 	padding: 0px;
 	background: none;
 }
-
+#videoYCancion, #fuenteOriginal {
+	border: 10px ridge;
+}
+#fuenteOriginal p{
+	font-size: 20px;
+}
 /*EL EQUIPO*/
 #autores, #autoria{
 	background: none;
 }
+
 #autores article{
 	display: flex;
 	flex-direction: row;
@@ -285,7 +291,7 @@ article div {
 	background-image: url(Imagenes/MineroAlvaro.png);
 }
 #david {
-	background-image: url(Imagenes/Minero.png);
+	background-image: url(Imagenes/MineroDavid.png);
 }
 #sandra {
 	background-image: url(Imagenes/MineroSandra.png);
@@ -516,6 +522,11 @@ aside h3{
 	#contribuciones div {
 		width: 100%;
 	}
+
+		#video{
+		width: 80%;
+		height: auto;
+	}
 }
 
 
@@ -594,4 +605,6 @@ aside h3{
 		opacity: 0;
 		pointer-events: none;
 	}
+
+
 }
