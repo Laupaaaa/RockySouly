@@ -351,7 +351,6 @@ aside {
 	display: flex;
 	flex-direction: column;
 	background: linear-gradient(to bottom, var(--amarillo), var(--naranja));
-
 }
 aside div{
 	margin: 20px;	
@@ -446,11 +445,23 @@ aside h3{
 
 .utterances-frame {
 	position: initial;
-	height: 300px;
+	height: 1000px;
 	z-index: -1;
+	overflow:auto ;
 }
+#cajaComent {
+	height: 300px;
+	overflow: auto;
+	background-color: none;
+}
+#cajaComent::-webkit-scrollbar{
+	width: 10px;
 
-
+}
+#cajaComent::-webkit-scrollbar-thumb {
+	background: var(--naranja);
+	border-radius: 5px;
+}
 
  /*BOTONES*/
 .abrirMenu{
@@ -544,7 +555,7 @@ aside h3{
 	}
 	#contribuciones article article{
 		align-items: center;
-						flex-direction: column;
+		flex-direction: column;
 		margin: 0px;
 
 	}
@@ -585,6 +596,13 @@ aside h3{
 		opacity: 1;
 		pointer-events: all;
 
+	}
+	nav > ul::-webkit-scrollbar{
+		width: 10px;
+	}
+	nav > ul::-webkit-scrollbar-thumb {
+		background: var(--naranja);
+		border-radius: 5px;
 	}
 	/*para que no crezcan los botones al pulsar y se salgan de la pantalla*/
 	nav > ul > li > a:hover {
